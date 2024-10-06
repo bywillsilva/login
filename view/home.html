@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Bem-vindo!</title>
+</head>
+<body class="flex_column">
+    <div class="welcome-container">
+        <h1>Bem-vindo, <span id="usuario-nome"></span>!</h1>
+        <p>Você está autenticado com sucesso.</p>
+        <button id="logout">Sair</button>
+    </div>
+
+    <script>
+        // Recuperar o nome do usuário do localStorage ou cookie
+        const usuarioNome = localStorage.getItem('usuarioNome') || 'Usuário';
+        document.getElementById('usuario-nome').innerText = usuarioNome;
+
+        // Logout
+        document.getElementById('logout').addEventListener('click', () => {
+            // Remover o nome do usuário do armazenamento
+            localStorage.removeItem('usuarioNome');
+            window.location.href = '/'; // Redireciona para a página de login
+        });
+    </script>
+</body>
+</html>

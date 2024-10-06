@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/index.css">
+        <title>Registro</title>
+    </head>
+    <body class="flex_column">
+        <h1 style="margin-bottom: 20px;">Registro</h1>
+        <form action="/registrar" method="post" class="flex_column"><!--form-->
+            <div class="flex_column"><!--input-->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div><!--input-->
+            <div class="flex_column"><!--input-->
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            </div><!--input-->
+            <div class="flex_column"><!--input-->
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+            </div><!--input-->
+            <button type="submit">Registrar</button>
+        </form><!--form-->
+        <a href="./login.html">Login</a>
+
+        <aside class="popup" id="popup">
+            <span id="popup_text"></span>
+        </aside>
+    </body>
+    <script src="/validaInput"></script>
+</html>
