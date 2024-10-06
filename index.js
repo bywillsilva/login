@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
 
 const { registrarUsuario, autenticarUsuario } = require('./js/autentic');
+
 
 const PORT = process.env.PORT || 3001
 
