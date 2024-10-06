@@ -3,6 +3,7 @@ const path = require('path');
 
 const { registrarUsuario, autenticarUsuario } = require('./js/autentic');
 
+const PORT = process.env.PORT || 3001
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -62,7 +63,7 @@ app.get('/validaInput', (req, res) => {
 });
 
 // Port Server Listen
-app.listen(3001);
+app.listen(PORT);
 
 
 module.exports = { app };
